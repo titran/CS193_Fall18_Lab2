@@ -1,0 +1,121 @@
+run() {
+	currdir=$(pwd)
+	tempdir=$(mktemp -d)
+
+	cd "${tempdir}"
+	sh "${currdir}"/lab2init > /dev/null
+	cd files
+	sh "${currdir}"/answers.txt
+	cd ..
+
+	test
+}
+
+test() {
+	err_count=0
+	buildings=("Lawson" "Hicks" "Rawls" "Krannert") 
+	cs_classes=("cs180" "cs182")
+	math_classes=("ma162" "ma153" "ma261")
+	professors=("Professor Dunsmore" "Professor Comer")
+
+	if [ -d "files" ]; then
+		cd files
+
+		if [ -d "purdue buildings" ]; then
+			cd "purdue buildings"
+
+			for i in "${buildings[@]}"
+			do
+				if [ ! -e $i ]; then
+					printf 'Missing file %s\n' "$i"
+					let err_count++
+				fi
+			done
+
+			cd ..
+		else
+			echo -e 'Missing directory "purdue buildings/"'
+			let err_count++
+		fi
+
+		if [ -d "purdue classes" ]; then
+			cd "purdue classes"
+
+			if [ -d "computer science" ]; then
+				cd "computer science"
+
+				for i in "${cs_classes[@]}"
+				do
+					if [ ! -e $i ]; then
+						printf 'Missing file %s\n' "$i"
+					  let err_count++
+					fi
+				done
+
+				cd ..
+			else
+				echo -e 'Missing directory "computer science/"'
+			  let err_count++
+			fi
+
+			if [ -d "math" ]; then
+				cd "math"
+
+				for i in "${math_classes[@]}"
+				do
+					if [ ! -e $i ]; then
+						printf 'file \"%s\" in incorrect place\n' "$i"
+					  let err_count++
+					fi
+				done
+
+				cd ..
+			else
+				echo -e 'Missing directory "purdue classes/"'
+				let err_count++
+			fi
+
+			cd ..
+		else
+			echo -e 'Missing directory "purdue buildings/"'
+			let err_count++
+		fi
+
+		if [ -d "purdue professors" ]; then
+			cd "purdue professors"
+
+		  if [ -d "computer science professors" ]; then
+				cd "computer science professors"
+
+				for i in "${professors[@]}"
+				do
+					if [ ! -e "$i" ]; then
+						printf 'file \"%s\" in incorrect place\n' "$i"
+						let err_count++
+					fi
+				done
+
+				cd ..
+			else
+				echo -e 'Missing directory "computer science professors/"'
+				let err_count++
+			fi
+
+			cd ..
+		else
+			echo -e 'Missing directory "purdue professors/"'
+			let err_count++
+		fi
+	else 
+		echo -e 'Missing directory "files/"'
+		echo -e 'Are you running this from the root of your git directory?'
+		let err_count++
+	fi
+
+	if [ "$err_count" -eq 0 ]; then
+		echo 'Tests passed'
+		echo 'NOTE: this does not test task 6!'
+	fi
+}
+
+run

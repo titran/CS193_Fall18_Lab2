@@ -40,6 +40,9 @@ Below is the folder structure that is generated from running the script command.
         |   |   ├──ma153
         |   |   ├──pol341
        
+## Testing:
+You can test tasks 1-5 by running `bash lab2test`.  This should give some feedback about where your answers may be going wrong.
+ 
  ## Rules and Example Task 
 There are 6 tasks, and you will write 6 **one line** terminal commands that fulfill that task. Each command may only contain **ONE BASE COMMAND** (`mv`, `ls`, `cp`, `rm`, etc). You may not combine different base commands (`cd`, `mv`) into one response, and you may not combine two of the same base commands (`mv`, `mv`) into one response. Examples of this are below in the *Task 0 Example*.
 
@@ -139,9 +142,8 @@ Here is how the folder structure should look at the end of all tasks.
         |   |  ├── Professor Dunsmore
         |   |  ├── Professor Comer
         
-       
 #### How to Submit: 
 Go to your repository on github.com and ensure the file answers.txt contains answers for all 6 parts. If you haven't already, edit this file directly through github  and when you're done press "commit changes" to submit the lab. 
 
 ### Extra Fun
-Take a look at "lab2init" and see if you can figure out how the script works! 
+Take a look at "lab2init" or "lab2test" and see if you can figure out how the scripts works! 
