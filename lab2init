@@ -1,9 +1,9 @@
-rm -rf ~/cs193lab2
+rm -rf ./files
 
-mkdir -p ~/cs193lab2/"purdue buildings" ~/cs193lab2/"purdue classes"/"computer science" ~/cs193lab2"/purdue classes"/math
+mkdir -p ./files/"purdue buildings" ./files/"purdue classes"/"computer science" ./files"/purdue classes"/math
 
-touch ~/cs193lab2/"purdue buildings"/{Lawson,Hicks,Rawls,"Professor Dunsmore","Professor Comer",Krannert}
-touch ~/cs193lab2/"purdue classes"/"computer science"/{cs180,cs182,ma261}
-touch ~/cs193lab2/"purdue classes"/math/{maa162,ma153,pol341}
+touch ./files/"purdue buildings"/{Lawson,Hicks,Rawls,"Professor Dunsmore","Professor Comer",Krannert}
+touch ./files/"purdue classes"/"computer science"/{cs180,cs182,ma261}
+touch ./files/"purdue classes"/math/{maa162,ma153,pol341}
 
-echo -e '\ndirectory ~/cs193lab2 reset!'
+echo -e '\ndirectory ./files reset!'

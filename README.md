@@ -13,7 +13,7 @@ Here are the steps in order to get your local repo set up:
 1. Open up the terminal and go to your home directory (the terminal should automatically open to your home directory)  
 2. Go to the main repo page on github and find the green button called "clone or download" on the right side. Click it and copy the url. Now go back to the terminal and run ```git clone INSERT_URL_HERE```. Now if you type ```ls``` and press enter you should see a new folder called ```lab-2-<your-github>```
 3. Go to the ```lab-2-<your-github>``` folder by running ```cd lab-2-<your-github>```
-4. Run ```bash lab2init``` in order to generate the files and folders for the rest of the lab. Note, a new folder called cs193lab2 will be generated in your home directory. Run ```cd ~``` to go to your home directory and ```cd``` into "cs193lab2" 
+4. Run ```bash lab2init``` in order to generate the files and folders for the rest of the lab. Note, a new folder called files will be generated in the directory you ran that command in. Now you can ```cd``` into "files" where you'll run the rest of your commands from.
 
 **In this lab you will be submitting a file called 'answers.txt'. Github lets us edit files directly on the website which is how you will complete this lab. Click 'answers.txt' in your repo and then click the pencil button on the right. Now you can edit this file directly through github and when you're done press "commit changes" to submit the lab.** 
 
@@ -47,12 +47,12 @@ There are 6 tasks, and you will write 6 **one line** terminal commands that fulf
 
 **All commands must be run from the working directory. You are not allowed to run commands from a directory other than the working directory (answers cannot contain the `cd` command).**
 
-> NOTE: Do not save this file within `~/cs193lab2` because that folder and all of its contents will be erased each time you run the bash init script
+> NOTE: Do not save this file within `./files` because that folder and all of its contents will be erased each time you run the bash init script
 
 
 #### Example: Task 0 
 
-    Working Directory:  ~/cs193lab2/
+    Working Directory:  ./files/
 
     Desired Action:     print out only the contents of the folder "purdue buildings"
 
@@ -73,51 +73,51 @@ Solve all 6 of these tasks, and record your answers in the `answers.txt` file.
     
  #### Task 1
 
-    Working Directory:  ~/cs193lab2/
+    Working Directory:  ./files/
 
-    Desired Action:    rename the file maa162 located in ~/cs193lab2/purdue classes/math to ma162 
+    Desired Action:    rename the file maa162 located in ./files/purdue classes/math to ma162 
 
     Write the answer under the Task 1 block.
   #### Task 2
 
-    Working Directory:  ~/cs193lab2/
+    Working Directory:  ./files/
 
-    Desired Action:    remove the file pol341 located in ~/cs193lab2/"purdue classes"/math
+    Desired Action:    remove the file pol341 located in ./files/"purdue classes"/math
 
     Write the answer under the Task 2 block.
     
    #### Task 3
 
-    Working Directory:  ~/cs193lab2/
+    Working Directory:  ./files/
 
-    Desired Action:    move the file ma261 located in ~/cs193lab2/"purdue classes"/"computer science" to the math folder located in ~/cs193lab2/"purdue classes"
+    Desired Action:    move the file ma261 located in ./files/"purdue classes"/"computer science" to the math folder located in ./files/"purdue classes"
 
     Write the answer under the Task 3 block.
 #### Task 4
 
-    Working Directory:  ~/cs193lab2/
+    Working Directory:  ./files/
 
     Desired Action:     make a folder called "purdue professors" with a folder inside called "computer science professors" in the working directory
 
     Write the answer under the Task 4 block.
 #### Task 5 
 
-    Working Directory:  ~/cs193lab2/
+    Working Directory:  ./files/
 
-    Desired Action:     move "Professor Dunsmore" and "Professor Comer", located in ~/cs193lab2/"purdue buildings", to the newly created folder called "computer science professors"
+    Desired Action:     move "Professor Dunsmore" and "Professor Comer", located in ./files/"purdue buildings", to the newly created folder called "computer science professors"
 
     Write the answer under the Task 5 block.
 #### Task 6 
 
-    Working Directory:  ~/cs193lab2/
+    Working Directory:  ./files/
 
-    Desired Action:     print out  the contents of all folders and subfolders in the working directory
+    Desired Action:     print out the contents of all folders and subfolders in the working directory
     
     Write the answer under the Task 6 block.
         
 Here is how the folder structure should look at the end of all tasks. 
 
-    cs193lab2/
+      files/
         ├── purdue buildings/
         │   ├── Lawson
         │   ├── Hicks
